@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 transition-colors duration-300 dark:bg-slate-950 dark:text-slate-100;
+  }
+}
+
+@layer components {
+  .glassmorphism {
+    @apply bg-white/70 backdrop-blur-md border border-white/20 dark:bg-slate-900/70 dark:border-slate-800/30;
+  }
+  
+  .glassmorphism-card {
+    @apply bg-white/40 backdrop-blur-lg border border-white/30 shadow-xl rounded-2xl p-6 dark:bg-slate-900/40 dark:border-slate-800/40;
+  }
+
+  .btn-primary {
+    @apply bg-gradient-to-r from-teal-500 to-indigo-600 hover:from-teal-600 hover:to-indigo-700 text-white font-semibold py-2 px-6 rounded-xl transition duration-300 transform hover:scale-[1.02] active:scale-[0.98] shadow-md shadow-indigo-500/10;
+  }
+
+  .btn-secondary {
+    @apply border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 py-2 px-6 rounded-xl transition duration-300;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl focus:outline-none focus:ring-2 focus:ring-teal-500 transition duration-200;
+  }
+}
