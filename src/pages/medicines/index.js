@@ -233,49 +233,51 @@ export default function MedicinesList() {
                   key={med._id}
                   className="flex flex-col bg-white dark:bg-slate-900 border border-slate-105/50 dark:border-slate-800 rounded-2xl p-4 shadow-sm hover:shadow-xl transition duration-300"
                 >
-                  <div className="relative h-40 w-full mb-4 rounded-xl overflow-hidden bg-slate-50 flex items-center justify-center">
-                    <img
-                      src={getImageUrl(med.images?.[0])}
-                      alt={med.name}
-                      className="max-h-full max-w-full object-contain"
-                    />
-                    {med.discount > 0 && (
-                      <span className="absolute top-2 left-2 bg-rose-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">
-                        -{med.discount}%
-                      </span>
-                    )}
-                  </div>
-
-                  <div className="flex-1 flex flex-col justify-between">
-                    <div>
-                      <div className="flex items-center gap-1.5 flex-wrap">
-                        <span className="text-[9px] font-bold uppercase tracking-wider text-slate-400">
-                          {med.brand?.name || 'CUISINE'}
+                  <Link href={`/medicines/${med._id}`} className="group flex-1 flex flex-col">
+                    <div className="relative h-40 w-full mb-4 rounded-xl overflow-hidden bg-slate-50 flex items-center justify-center">
+                      <img
+                        src={getImageUrl(med.images?.[0])}
+                        alt={med.name}
+                        className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300"
+                      />
+                      {med.discount > 0 && (
+                        <span className="absolute top-2 left-2 bg-rose-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">
+                          -{med.discount}%
                         </span>
-                        {med.category && (
-                          <span className="text-[9px] font-bold uppercase tracking-wider bg-teal-500/10 text-teal-650 px-2 py-0.5 rounded-full">
-                            {med.category.name}
-                          </span>
-                        )}
-                      </div>
-                      <h3 className="font-bold text-sm mt-1 truncate">{med.name}</h3>
-                      <p className="text-xs text-slate-400 truncate mb-4">{med.genericName}</p>
+                      )}
                     </div>
 
-                    <div className="flex justify-between items-center mt-auto">
+                    <div className="flex-1 flex flex-col justify-between">
                       <div>
-                        <span className="font-extrabold text-teal-605 dark:text-teal-400 text-sm">₹{med.sellingPrice}</span>
-                        {med.discount > 0 && (
-                          <span className="text-[10px] text-slate-405 line-through ml-1.5">₹{med.MRP}</span>
-                        )}
+                        <div className="flex items-center gap-1.5 flex-wrap">
+                          <span className="text-[9px] font-bold uppercase tracking-wider text-slate-400">
+                            {med.brand?.name || 'CUISINE'}
+                          </span>
+                          {med.category && (
+                            <span className="text-[9px] font-bold uppercase tracking-wider bg-teal-500/10 text-teal-650 px-2 py-0.5 rounded-full">
+                              {med.category.name}
+                            </span>
+                          )}
+                        </div>
+                        <h3 className="font-bold text-sm mt-1 truncate group-hover:text-teal-500 transition-colors">{med.name}</h3>
+                        <p className="text-xs text-slate-400 truncate mb-4">{med.genericName}</p>
                       </div>
-                      <Link
-                        href={`/medicines/${med._id}`}
-                        className="border border-teal-500/20 hover:bg-teal-500 hover:text-white text-teal-500 font-bold px-3 py-1 rounded-xl text-[11px] transition"
-                      >
-                        Buy
-                      </Link>
                     </div>
+                  </Link>
+
+                  <div className="flex justify-between items-center mt-4 pt-2 border-t border-slate-100 dark:border-slate-800">
+                    <div>
+                      <span className="font-extrabold text-teal-605 dark:text-teal-400 text-sm">₹{med.sellingPrice}</span>
+                      {med.discount > 0 && (
+                        <span className="text-[10px] text-slate-405 line-through ml-1.5">₹{med.MRP}</span>
+                      )}
+                    </div>
+                    <Link
+                      href={`/medicines/${med._id}`}
+                      className="border border-teal-500/20 hover:bg-teal-500 hover:text-white text-teal-500 font-bold px-3 py-1 rounded-xl text-[11px] transition"
+                    >
+                      Buy
+                    </Link>
                   </div>
                 </div>
               ))}

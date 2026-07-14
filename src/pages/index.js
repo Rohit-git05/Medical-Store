@@ -85,34 +85,34 @@ export default function Home() {
 
       {/* Why Choose Us */}
       <section className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
-        <div className="glassmorphism-card p-6 flex flex-col items-center text-center">
+        <Link href="/medicines" className="glassmorphism-card p-6 flex flex-col items-center text-center hover:scale-105 transition-transform duration-300">
           <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-teal-500/10 text-teal-605 mb-4">
             <FiShield size={24} />
           </span>
           <h3 className="font-bold text-lg mb-2">Hygienic Kitchens</h3>
           <p className="text-sm text-slate-400">All meals are cooked following highest hygiene standards.</p>
-        </div>
-        <div className="glassmorphism-card p-6 flex flex-col items-center text-center">
+        </Link>
+        <Link href="/medicines" className="glassmorphism-card p-6 flex flex-col items-center text-center hover:scale-105 transition-transform duration-300">
           <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-500/10 text-indigo-605 mb-4">
             <FiTruck size={24} />
           </span>
           <h3 className="font-bold text-lg mb-2">Superfast Delivery</h3>
           <p className="text-sm text-slate-400">Fresh and piping hot food delivered at your door in 30 minutes.</p>
-        </div>
-        <div className="glassmorphism-card p-6 flex flex-col items-center text-center">
+        </Link>
+        <Link href="/medicines" className="glassmorphism-card p-6 flex flex-col items-center text-center hover:scale-105 transition-transform duration-300">
           <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-amber-500/10 text-amber-605 mb-4">
             <FiClock size={24} />
           </span>
           <h3 className="font-bold text-lg mb-2">Realtime Tracking</h3>
           <p className="text-sm text-slate-400">Track your order status and rider location in real-time.</p>
-        </div>
-        <div className="glassmorphism-card p-6 flex flex-col items-center text-center">
+        </Link>
+        <Link href="/medicines" className="glassmorphism-card p-6 flex flex-col items-center text-center hover:scale-105 transition-transform duration-300">
           <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-purple-500/10 text-purple-655 mb-4">
             <FiCheckCircle size={24} />
           </span>
           <h3 className="font-bold text-lg mb-2">Easy Refunds</h3>
           <p className="text-sm text-slate-400">Hassle-free refunds if your culinary experience isn't perfect.</p>
-        </div>
+        </Link>
       </section>
 
       {/* Category Section */}
@@ -133,20 +133,17 @@ export default function Home() {
       </section>
 
       {/* Upload Prescription Call-To-Action Banner */}
-      <section className="glassmorphism-card bg-gradient-to-r from-indigo-50/50 to-teal-50/50 dark:from-slate-900/40 dark:to-slate-900/10 p-8 rounded-3xl flex flex-col md:flex-row items-center justify-between gap-6 mb-16 border border-slate-205/30">
+      <Link href="/medicines" className="glassmorphism-card bg-gradient-to-r from-indigo-50/50 to-teal-50/50 dark:from-slate-900/40 dark:to-slate-900/10 p-8 rounded-3xl flex flex-col md:flex-row items-center justify-between gap-6 mb-16 border border-slate-205/30 hover:shadow-lg transition-shadow duration-300">
         <div className="space-y-2 max-w-xl">
           <h2 className="text-2xl font-extrabold tracking-tight">Special Promo: Get 30% OFF</h2>
           <p className="text-sm text-slate-400">
             Feeling hungry? Enter coupon code <strong className="text-orange-500">BITE30</strong> at checkout to claim 30% discount on your order. Valid today!
           </p>
         </div>
-        <Link
-          href="/medicines"
-          className="btn-primary py-3 px-8 text-sm flex items-center gap-2"
-        >
+        <span className="btn-primary py-3 px-8 text-sm flex items-center gap-2">
           Browse Delicious Menu
-        </Link>
-      </section>
+        </span>
+      </Link>
 
       {/* Featured Medicines List */}
       <section className="mb-16">
@@ -174,42 +171,44 @@ export default function Home() {
                 key={med._id}
                 className="flex flex-col bg-white dark:bg-slate-900 border border-slate-105/50 dark:border-slate-800 rounded-2xl p-4 shadow-sm hover:shadow-xl hover:border-teal-500/10 transition duration-300"
               >
-                <div className="relative h-40 w-full mb-4 rounded-xl overflow-hidden bg-slate-50 flex items-center justify-center">
-                  <img
-                    src={getImageUrl(med.images?.[0])}
-                    alt={med.name}
-                    className="max-h-full max-w-full object-contain"
-                  />
-                  {med.discount > 0 && (
-                    <span className="absolute top-2 left-2 bg-rose-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">
-                      -{med.discount}% OFF
-                    </span>
-                  )}
-                </div>
-
-                <div className="flex-1 flex flex-col justify-between">
-                  <div>
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400">
-                      {med.brand?.name || 'CUISINE'}
-                    </span>
-                    <h3 className="font-bold text-sm mt-1 truncate">{med.name}</h3>
-                    <p className="text-xs text-slate-400 truncate mb-4">{med.genericName}</p>
+                <Link href={`/medicines/${med._id}`} className="group flex-1 flex flex-col">
+                  <div className="relative h-40 w-full mb-4 rounded-xl overflow-hidden bg-slate-50 flex items-center justify-center">
+                    <img
+                      src={getImageUrl(med.images?.[0])}
+                      alt={med.name}
+                      className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300"
+                    />
+                    {med.discount > 0 && (
+                      <span className="absolute top-2 left-2 bg-rose-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">
+                        -{med.discount}% OFF
+                      </span>
+                    )}
                   </div>
 
-                  <div className="flex justify-between items-center mt-auto">
+                  <div className="flex-1 flex flex-col justify-between">
                     <div>
-                      <span className="font-extrabold text-teal-605 dark:text-teal-400">₹{med.sellingPrice}</span>
-                      {med.discount > 0 && (
-                        <span className="text-xs text-slate-400 line-through ml-2">₹{med.MRP}</span>
-                      )}
+                      <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400">
+                        {med.brand?.name || 'CUISINE'}
+                      </span>
+                      <h3 className="font-bold text-sm mt-1 truncate group-hover:text-teal-500 transition-colors">{med.name}</h3>
+                      <p className="text-xs text-slate-400 truncate mb-4">{med.genericName}</p>
                     </div>
-                    <Link
-                      href={`/medicines/${med._id}`}
-                      className="border border-teal-500/20 hover:bg-teal-500 hover:text-white text-teal-500 font-bold px-3 py-1.5 rounded-xl text-xs transition"
-                    >
-                      Details
-                    </Link>
                   </div>
+                </Link>
+
+                <div className="flex justify-between items-center mt-4 pt-2 border-t border-slate-100 dark:border-slate-800">
+                  <div>
+                    <span className="font-extrabold text-teal-605 dark:text-teal-400">₹{med.sellingPrice}</span>
+                    {med.discount > 0 && (
+                      <span className="text-xs text-slate-400 line-through ml-2">₹{med.MRP}</span>
+                    )}
+                  </div>
+                  <Link
+                    href={`/medicines/${med._id}`}
+                    className="border border-teal-500/20 hover:bg-teal-500 hover:text-white text-teal-500 font-bold px-3 py-1.5 rounded-xl text-xs transition"
+                  >
+                    Details
+                  </Link>
                 </div>
               </div>
             ))}
