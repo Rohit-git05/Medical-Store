@@ -41,14 +41,11 @@ export default function Home() {
   }, []);
 
   const premiumCategories = [
-    { name: 'Tablets', icon: '💊', color: 'from-blue-500/10 to-blue-600/10' },
-    { name: 'Capsules', icon: '💊', color: 'from-emerald-500/10 to-emerald-600/10' },
-    { name: 'Syrups', icon: '🧪', color: 'from-amber-500/10 to-amber-600/10' },
-    { name: 'Injections', icon: '💉', color: 'from-red-500/10 to-red-600/10' },
-    { name: 'Vitamins', icon: '🍊', color: 'from-orange-500/10 to-orange-600/10' },
-    { name: 'Diabetes Care', icon: '🩸', color: 'from-rose-500/10 to-rose-600/10' },
-    { name: 'Baby Care', icon: '🍼', color: 'from-purple-500/10 to-purple-600/10' },
-    { name: 'Personal Care', icon: '🧴', color: 'from-pink-500/10 to-pink-600/10' }
+    { name: 'Appetizers', icon: '🍢', color: 'from-orange-500/10 to-orange-600/10' },
+    { name: 'Mains', icon: '🍔', color: 'from-red-500/10 to-red-600/10' },
+    { name: 'Desserts', icon: '🍰', color: 'from-pink-500/10 to-pink-600/10' },
+    { name: 'Beverages', icon: '🥤', color: 'from-blue-500/10 to-blue-600/10' },
+    { name: 'Snacks', icon: '🍿', color: 'from-amber-500/10 to-amber-600/10' }
   ];
 
   return (
@@ -62,24 +59,24 @@ export default function Home() {
             transition={{ duration: 0.5 }}
             className="text-4xl sm:text-5xl font-extrabold tracking-tight leading-tight"
           >
-            Your Health, <br />
-            Our Utmost Priority.
+            Delicious Food, <br />
+            Delivered Instantly.
           </motion.h1>
           <p className="text-lg text-teal-50/80">
-            Order authentic medicines, check out with healthcare products, and upload doctor prescriptions online. Free delivery over ₹500.
+            Order warm pizzas, gourmet burgers, local appetizers, and sweet desserts online. Superfast delivery straight to your doorstep.
           </p>
           <div className="flex flex-wrap gap-4 pt-2">
             <Link
               href="/medicines"
               className="bg-white hover:bg-slate-100 text-indigo-750 font-bold px-8 py-3 rounded-xl transition shadow-lg"
             >
-              Order Medicines
+              Order Food Now
             </Link>
             <Link
-              href="/dashboard/customer/prescriptions"
-              className="bg-teal-400/20 hover:bg-teal-400/35 border border-teal-350 text-white font-bold px-8 py-3 rounded-xl transition"
+              href="/medicines?sort=bestSelling"
+              className="bg-teal-400/20 hover:bg-teal-400/35 border border-teal-355 text-white font-bold px-8 py-3 rounded-xl transition"
             >
-              Upload Prescription
+              Trending Menu
             </Link>
           </div>
         </div>
@@ -91,29 +88,29 @@ export default function Home() {
           <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-teal-500/10 text-teal-605 mb-4">
             <FiShield size={24} />
           </span>
-          <h3 className="font-bold text-lg mb-2">100% Genuine</h3>
-          <p className="text-sm text-slate-400">All medicines sourced directly from authorized brand suppliers.</p>
+          <h3 className="font-bold text-lg mb-2">Hygienic Kitchens</h3>
+          <p className="text-sm text-slate-400">All meals are cooked following highest hygiene standards.</p>
         </div>
         <div className="glassmorphism-card p-6 flex flex-col items-center text-center">
           <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-500/10 text-indigo-605 mb-4">
             <FiTruck size={24} />
           </span>
-          <h3 className="font-bold text-lg mb-2">Express Delivery</h3>
-          <p className="text-sm text-slate-400">Home delivery in 24-48 hours across major locations.</p>
+          <h3 className="font-bold text-lg mb-2">Superfast Delivery</h3>
+          <p className="text-sm text-slate-400">Fresh and piping hot food delivered at your door in 30 minutes.</p>
         </div>
         <div className="glassmorphism-card p-6 flex flex-col items-center text-center">
           <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-amber-500/10 text-amber-605 mb-4">
             <FiClock size={24} />
           </span>
-          <h3 className="font-bold text-lg mb-2">24/7 Support</h3>
-          <p className="text-sm text-slate-400">Dedicated pharmacist advice support helpline.</p>
+          <h3 className="font-bold text-lg mb-2">Realtime Tracking</h3>
+          <p className="text-sm text-slate-400">Track your order status and rider location in real-time.</p>
         </div>
         <div className="glassmorphism-card p-6 flex flex-col items-center text-center">
           <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-purple-500/10 text-purple-655 mb-4">
             <FiCheckCircle size={24} />
           </span>
-          <h3 className="font-bold text-lg mb-2">Easy Returns</h3>
-          <p className="text-sm text-slate-400">Hassle free 7-day return policies on healthcare packs.</p>
+          <h3 className="font-bold text-lg mb-2">Easy Refunds</h3>
+          <p className="text-sm text-slate-400">Hassle-free refunds if your culinary experience isn't perfect.</p>
         </div>
       </section>
 
@@ -137,25 +134,25 @@ export default function Home() {
       {/* Upload Prescription Call-To-Action Banner */}
       <section className="glassmorphism-card bg-gradient-to-r from-indigo-50/50 to-teal-50/50 dark:from-slate-900/40 dark:to-slate-900/10 p-8 rounded-3xl flex flex-col md:flex-row items-center justify-between gap-6 mb-16 border border-slate-205/30">
         <div className="space-y-2 max-w-xl">
-          <h2 className="text-2xl font-extrabold tracking-tight">Quick Rx Prescription Upload</h2>
+          <h2 className="text-2xl font-extrabold tracking-tight">Special Promo: Get 30% OFF</h2>
           <p className="text-sm text-slate-400">
-            Have a doctor's prescription? Simply upload the picture or PDF, and our pharmacists will review, suggest, and prepare your medicines cart automatically!
+            Feeling hungry? Enter coupon code <strong className="text-orange-500">BITE30</strong> at checkout to claim 30% discount on your order. Valid today!
           </p>
         </div>
         <Link
-          href="/dashboard/customer/prescriptions"
+          href="/medicines"
           className="btn-primary py-3 px-8 text-sm flex items-center gap-2"
         >
-          <FiUploadCloud size={18} /> Upload Prescription
+          Browse Delicious Menu
         </Link>
       </section>
 
       {/* Featured Medicines List */}
       <section className="mb-16">
         <div className="flex justify-between items-center mb-6">
-          <h2 className="text-2xl font-extrabold tracking-tight">Featured Healthcare Products</h2>
+          <h2 className="text-2xl font-extrabold tracking-tight">Trending Dishes</h2>
           <Link href="/medicines" className="text-teal-500 hover:text-teal-600 font-bold text-sm flex items-center gap-1">
-            View All <FiChevronRight />
+            View Menu <FiChevronRight />
           </Link>
         </div>
 
@@ -221,7 +218,7 @@ export default function Home() {
 
       {/* Blogs list section */}
       <section className="mb-16">
-        <h2 className="text-2xl font-extrabold mb-6 tracking-tight">Health & Wellness Blogs</h2>
+        <h2 className="text-2xl font-extrabold mb-6 tracking-tight">Food & Culinary Insights</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {blogs.length === 0 ? (
             // Mock blogs placeholders if DB is empty

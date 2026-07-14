@@ -92,11 +92,11 @@ export default function Navbar() {
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center gap-2">
-              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-tr from-teal-400 to-indigo-600 text-xl font-bold text-white shadow-lg">
-                H
+              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-tr from-teal-400 to-indigo-650 text-xl font-bold text-white shadow-lg">
+                B
               </span>
-              <span className="hidden text-xl font-extrabold tracking-tight bg-gradient-to-r from-teal-500 to-indigo-600 bg-clip-text text-transparent sm:block">
-                HealStore
+              <span className="hidden text-xl font-extrabold tracking-tight bg-gradient-to-r from-teal-500 to-indigo-650 bg-clip-text text-transparent sm:block">
+                BiteDash
               </span>
             </Link>
           </div>
@@ -106,7 +106,7 @@ export default function Navbar() {
             <form onSubmit={handleSearchSubmit} className="relative">
               <input
                 type="text"
-                placeholder="Search medicines, health products..."
+                placeholder="Search food, cuisines, kitchens..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 onFocus={() => searchQuery.trim() && setShowSuggestions(true)}
@@ -232,7 +232,7 @@ export default function Navbar() {
             onClick={() => setMobileMenuOpen(false)}
             className="block px-4 py-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl text-sm"
           >
-            Browse Medicines
+            Browse Menu
           </Link>
           <Link
             href="/cart"

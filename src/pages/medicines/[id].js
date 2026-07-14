@@ -163,7 +163,7 @@ export default function MedicineDetail() {
   }
 
   return (
-    <Layout title={`${medicine.name} - HealStore`}>
+    <Layout title={`${medicine.name} - BiteDash`}>
       <div className="space-y-12">
         {/* Main Details Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -208,7 +208,7 @@ export default function MedicineDetail() {
                 )}
               </div>
               <h1 className="text-3xl font-extrabold tracking-tight mt-3">{medicine.name}</h1>
-              <p className="text-sm text-slate-400 mt-1 italic">Generic Name: {medicine.genericName}</p>
+              <p className="text-sm text-slate-400 mt-1 italic">Cuisine: {medicine.genericName}</p>
             </div>
 
             {/* Ratings and RX */}
@@ -216,9 +216,13 @@ export default function MedicineDetail() {
               <div className="flex items-center gap-1 text-amber-500 font-bold text-sm">
                 <FiStar className="fill-current" /> {medicine.averageRating} ({medicine.numReviews} Reviews)
               </div>
-              {medicine.prescriptionRequired && (
-                <div className="flex items-center gap-1.5 text-rose-500 font-bold text-xs bg-rose-500/10 px-3 py-1 rounded-full">
-                  <FiAlertCircle /> Prescription Required
+              {medicine.prescriptionRequired ? (
+                <div className="flex items-center gap-1.5 text-red-500 font-bold text-xs bg-red-500/10 px-3 py-1 rounded-full">
+                  🔴 Non-Veg
+                </div>
+              ) : (
+                <div className="flex items-center gap-1.5 text-emerald-600 font-bold text-xs bg-emerald-500/10 px-3 py-1 rounded-full">
+                  🟢 Veg
                 </div>
               )}
             </div>
@@ -292,11 +296,11 @@ export default function MedicineDetail() {
             <div className="space-y-4 pt-4 border-t border-slate-205/30">
               <div className="grid grid-cols-2 gap-4 text-sm mb-4">
                 <div>
-                  <span className="font-bold text-xs text-slate-400 block uppercase">Manufacturer</span>
-                  <span>{medicine.manufacturer || 'N/A'}</span>
+                  <span className="font-bold text-xs text-slate-400 block uppercase">Kitchen</span>
+                  <span>{medicine.manufacturer || 'Partner Kitchen'}</span>
                 </div>
                 <div>
-                  <span className="font-bold text-xs text-slate-400 block uppercase">Expiry Date</span>
+                  <span className="font-bold text-xs text-slate-400 block uppercase">Best Enjoyed Before</span>
                   <span>{new Date(medicine.expiryDate).toLocaleDateString()}</span>
                 </div>
               </div>
@@ -310,7 +314,7 @@ export default function MedicineDetail() {
                     onClick={() => toggleSection('uses')}
                     className="w-full flex items-center justify-between p-3.5 bg-slate-50 dark:bg-slate-900/50 hover:bg-slate-100 dark:hover:bg-slate-900 font-bold text-xs uppercase tracking-wider text-slate-500 text-left transition"
                   >
-                    <span>Uses & Indications</span>
+                    <span>Ingredients & Recipe</span>
                     <span className="text-sm">{openSections.uses ? '−' : '+'}</span>
                   </button>
                   {openSections.uses && (
@@ -327,7 +331,7 @@ export default function MedicineDetail() {
                     onClick={() => toggleSection('dosage')}
                     className="w-full flex items-center justify-between p-3.5 bg-slate-50 dark:bg-slate-900/50 hover:bg-slate-100 dark:hover:bg-slate-900 font-bold text-xs uppercase tracking-wider text-slate-500 text-left transition"
                   >
-                    <span>Dosage Instructions</span>
+                    <span>Portion Size & Servings</span>
                     <span className="text-sm">{openSections.dosage ? '−' : '+'}</span>
                   </button>
                   {openSections.dosage && (
@@ -344,7 +348,7 @@ export default function MedicineDetail() {
                     onClick={() => toggleSection('sideEffects')}
                     className="w-full flex items-center justify-between p-3.5 bg-slate-50 dark:bg-slate-900/50 hover:bg-slate-100 dark:hover:bg-slate-900 font-bold text-xs uppercase tracking-wider text-slate-500 text-left transition"
                   >
-                    <span>Common Side Effects</span>
+                    <span>Allergen Advisories</span>
                     <span className="text-sm">{openSections.sideEffects ? '−' : '+'}</span>
                   </button>
                   {openSections.sideEffects && (
@@ -369,7 +373,7 @@ export default function MedicineDetail() {
                     onClick={() => toggleSection('precautions')}
                     className="w-full flex items-center justify-between p-3.5 bg-slate-50 dark:bg-slate-900/50 hover:bg-slate-100 dark:hover:bg-slate-900 font-bold text-xs uppercase tracking-wider text-slate-500 text-left transition"
                   >
-                    <span>Precautions & Safety Advisories</span>
+                    <span>Chef's Customization Notes</span>
                     <span className="text-sm">{openSections.precautions ? '−' : '+'}</span>
                   </button>
                   {openSections.precautions && (
@@ -421,7 +425,7 @@ export default function MedicineDetail() {
                     required
                     value={reviewTextInput}
                     onChange={(e) => setReviewTextInput(e.target.value)}
-                    placeholder="Share your experience with this medicine..."
+                    placeholder="Share your dining experience with this dish..."
                     className="input-field text-sm"
                   />
                 </div>

@@ -121,14 +121,14 @@ export default function CheckoutPage() {
 
   if (orderSuccess) {
     return (
-      <Layout title="Checkout Successful - HealStore">
+      <Layout title="Checkout Successful - BiteDash">
         <div className="flex flex-col items-center justify-center py-20 text-center space-y-4">
           <span className="flex h-16 w-16 items-center justify-center rounded-full bg-emerald-500/10 text-emerald-600">
             <FiCheckCircle size={32} />
           </span>
           <h2 className="text-3xl font-extrabold text-slate-800 dark:text-white">Order Placed Successfully!</h2>
           <p className="text-sm text-slate-400 max-w-sm">
-            Thank you for shopping. An email confirmation containing your order receipt has been sent to your registered account.
+            Thank you for ordering. Your fresh food is being prepared and will be delivered shortly!
           </p>
           <div className="bg-slate-100 dark:bg-slate-900 border p-4 rounded-xl text-left text-xs space-y-1 w-full max-w-xs font-semibold">
             <p>Order ID: {createdOrder?._id}</p>
@@ -145,7 +145,7 @@ export default function CheckoutPage() {
   }
 
   return (
-    <Layout title="Checkout - HealStore">
+    <Layout title="Checkout - BiteDash">
       <h1 className="text-3xl font-extrabold tracking-tight mb-8">Checkout</h1>
 
       {checkoutError && (

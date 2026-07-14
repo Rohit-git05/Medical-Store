@@ -41,17 +41,17 @@ export default function CartPage() {
 
   if (cart.items.length === 0) {
     return (
-      <Layout title="Shopping Cart - HealStore">
+      <Layout title="Your Basket - BiteDash">
         <div className="flex flex-col items-center justify-center py-20 text-center space-y-4">
           <span className="flex h-16 w-16 items-center justify-center rounded-2xl bg-teal-500/10 text-teal-605">
             <FiShoppingCart size={32} />
           </span>
           <h2 className="text-2xl font-extrabold">Your Cart is Empty</h2>
           <p className="text-sm text-slate-400 max-w-sm">
-            Add medicines or healthcare essentials to your shopping cart to complete checkout.
+            Add delicious pizzas, burgers, appetizers, or desserts to your basket to complete checkout.
           </p>
           <Link href="/medicines" className="btn-primary py-2.5 px-6 text-sm">
-            Browse Medicines
+            Browse Menu
           </Link>
         </div>
       </Layout>
@@ -59,8 +59,8 @@ export default function CartPage() {
   }
 
   return (
-    <Layout title="Shopping Cart - HealStore">
-      <h1 className="text-3xl font-extrabold tracking-tight mb-8">Shopping Cart</h1>
+    <Layout title="Your Basket - BiteDash">
+      <h1 className="text-3xl font-extrabold tracking-tight mb-8">Your Basket</h1>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* Left Side: Items List */}
@@ -141,7 +141,7 @@ export default function CartPage() {
                 </div>
               )}
               <div className="flex justify-between">
-                <span className="text-slate-450">GST (12% standard)</span>
+                <span className="text-slate-450">GST & Restaurant Tax (5%)</span>
                 <span>₹{gst}</span>
               </div>
               <div className="flex justify-between">

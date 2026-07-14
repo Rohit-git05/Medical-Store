@@ -168,8 +168,8 @@ export function CartProvider({ children }) {
       }
     }
 
-    const gst = Math.round(subtotal * 0.12 * 100) / 100; // 12% GST standard
-    const shipping = subtotal > 500 || subtotal === 0 ? 0 : 50;
+    const gst = Math.round(subtotal * 0.05 * 100) / 100; // 5% GST food delivery rate
+    const shipping = subtotal > 200 || subtotal === 0 ? 0 : 40; // Free delivery above ₹200, otherwise ₹40
     const grandTotal = Math.round((subtotal - couponDiscount + gst + shipping) * 100) / 100;
 
     return {

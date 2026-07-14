@@ -110,7 +110,7 @@ export default function MedicinesList() {
   };
 
   return (
-    <Layout title="Browse Medicines - HealStore">
+    <Layout title="Browse Menu - BiteDash">
       <div className="flex flex-col lg:flex-row gap-8">
         {/* Left Filter Sidebar */}
         <aside className="w-full lg:w-64 shrink-0 glassmorphism-card p-5 border border-slate-205/30 h-fit space-y-6">
@@ -136,15 +136,15 @@ export default function MedicinesList() {
             </select>
           </div>
 
-          {/* Brand Filter */}
+          {/* Cuisine Filter */}
           <div className="space-y-2">
-            <label className="text-xs font-bold uppercase tracking-wider text-slate-450">Brand</label>
+            <label className="text-xs font-bold uppercase tracking-wider text-slate-450">Cuisine</label>
             <select
               value={selectedBrand}
               onChange={(e) => { setSelectedBrand(e.target.value); setPage(1); }}
               className="input-field py-2 text-sm"
             >
-              <option value="">All Brands</option>
+              <option value="">All Cuisines</option>
               {brands.map((b) => (
                 <option key={b._id} value={b._id}>{b.name}</option>
               ))}
@@ -172,20 +172,7 @@ export default function MedicinesList() {
             </div>
           </div>
 
-          {/* Rx prescription verification */}
-          <div className="space-y-2">
-            <label className="text-xs font-bold uppercase tracking-wider text-slate-450">Prescription</label>
-            <div className="flex items-center gap-2 text-sm">
-              <input
-                type="checkbox"
-                id="rx"
-                checked={prescriptionRequired === 'true'}
-                onChange={(e) => { setPrescriptionRequired(e.target.checked ? 'true' : ''); setPage(1); }}
-                className="rounded border-slate-300 text-teal-600 focus:ring-teal-500 h-4 w-4"
-              />
-              <label htmlFor="rx" className="cursor-pointer font-medium">Prescription Required</label>
-            </div>
-          </div>
+          {/* Prescription filter removed */}
 
           {/* Availability */}
           <div className="space-y-2">
@@ -208,7 +195,7 @@ export default function MedicinesList() {
           {/* Top Actions: Search input sync, sorting, count indicator */}
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 glassmorphism rounded-2xl p-4">
             <div className="text-sm font-semibold text-slate-500">
-              Showing {totalItems} results for "{search || 'All medicines'}"
+              Showing {totalItems} results for "{search || 'All menu items'}"
             </div>
             <div className="flex items-center gap-2 self-end">
               <label className="text-xs font-bold uppercase text-slate-400">Sort By</label>
@@ -232,7 +219,7 @@ export default function MedicinesList() {
           ) : medicines.length === 0 ? (
             <div className="glassmorphism-card text-center py-20">
               <span className="text-5xl">🔍</span>
-              <h3 className="font-extrabold text-xl mt-4">No Medicines Found</h3>
+              <h3 className="font-extrabold text-xl mt-4">No Dishes Found</h3>
               <p className="text-sm text-slate-400 mt-2">Try adjusting your filters or search query.</p>
               <button onClick={resetFilters} className="btn-primary py-2 px-6 mt-6 text-sm">
                 Reset Filters
@@ -262,7 +249,7 @@ export default function MedicinesList() {
                     <div>
                       <div className="flex items-center gap-1.5 flex-wrap">
                         <span className="text-[9px] font-bold uppercase tracking-wider text-slate-400">
-                          {med.brand?.name || 'GENERIC'}
+                          {med.brand?.name || 'CUISINE'}
                         </span>
                         {med.category && (
                           <span className="text-[9px] font-bold uppercase tracking-wider bg-teal-500/10 text-teal-650 px-2 py-0.5 rounded-full">
