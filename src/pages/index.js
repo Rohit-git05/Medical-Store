@@ -252,6 +252,87 @@ export default function Home() {
           )}
         </div>
       </section>
+
+      {/* Testimonials section */}
+      <section className="mb-16">
+        <h2 className="text-2xl font-extrabold mb-6 tracking-tight">What Our Foodies Say</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="glassmorphism-card p-6 border border-slate-200/50 flex flex-col justify-between">
+            <p className="text-sm text-slate-400 italic">
+              "BiteDash has completely changed how I order food. The delivery is incredibly fast, and the meals always arrive steaming hot. 10/10 recommended!"
+            </p>
+            <div className="flex items-center gap-3 mt-6">
+              <img
+                src="/uploads/page_10.png"
+                alt="Alex Mercer"
+                className="w-10 h-10 rounded-full object-cover border border-orange-500"
+              />
+              <div>
+                <h4 className="font-bold text-sm">Alex Mercer</h4>
+                <div className="flex gap-0.5 mt-0.5">
+                  <img src="/uploads/page_6.png" alt="5 Stars" className="h-3" />
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div className="glassmorphism-card p-6 border border-slate-200/50 flex flex-col justify-between">
+            <p className="text-sm text-slate-400 italic">
+              "The desserts here are pure heaven! The Strawberry Cheesecake slice is out of this world. Highly recommend BiteDash for midnight cravings."
+            </p>
+            <div className="flex items-center gap-3 mt-6">
+              <img
+                src="/uploads/page_10.png"
+                alt="Sarah Jenkins"
+                className="w-10 h-10 rounded-full object-cover border border-orange-500"
+              />
+              <div>
+                <h4 className="font-bold text-sm">Sarah Jenkins</h4>
+                <div className="flex gap-0.5 mt-0.5">
+                  <img src="/uploads/page_6.png" alt="5 Stars" className="h-3" />
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div className="glassmorphism-card p-6 border border-slate-200/50 flex flex-col justify-between">
+            <p className="text-sm text-slate-400 italic">
+              "Outstanding selection of cuisines. I order the Tuscan Chicken Pasta almost every week. The preparation is clean and the taste is spot on."
+            </p>
+            <div className="flex items-center gap-3 mt-6">
+              <img
+                src="/uploads/page_10.png"
+                alt="David Miller"
+                className="w-10 h-10 rounded-full object-cover border border-orange-500"
+              />
+              <div>
+                <h4 className="font-bold text-sm">David Miller</h4>
+                <div className="flex gap-0.5 mt-0.5">
+                  <img src="/uploads/page_6.png" alt="5 Stars" className="h-3" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* App download section */}
+      <section className="relative rounded-3xl overflow-hidden mb-16 bg-gradient-to-r from-orange-500/90 to-red-600/90 py-12 px-8 text-white shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8">
+        <div className="max-w-xl space-y-4">
+          <h2 className="text-3xl font-extrabold tracking-tight">Order Food On The Go</h2>
+          <p className="text-sm text-orange-50/80">
+            Download the BiteDash mobile app today to track orders live, save delivery addresses, and enjoy premium exclusive discount coupons!
+          </p>
+        </div>
+        <div className="flex flex-wrap gap-4 shrink-0">
+          <a href="https://play.google.com" target="_blank" rel="noopener noreferrer" className="hover:scale-105 transition-transform duration-200">
+            <img src="/uploads/page_4.png" alt="Get it on Google Play" className="h-12 object-contain" />
+          </a>
+          <a href="https://apple.com/app-store" target="_blank" rel="noopener noreferrer" className="hover:scale-105 transition-transform duration-200">
+            <img src="/uploads/page_61.png" alt="Download on the App Store" className="h-12 object-contain" />
+          </a>
+        </div>
+      </section>
     </Layout>
   );
 }

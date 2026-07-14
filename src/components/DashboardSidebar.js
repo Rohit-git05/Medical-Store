@@ -62,10 +62,15 @@ export default function DashboardSidebar() {
 
   return (
     <aside className="w-full md:w-64 glassmorphism border border-slate-200/50 dark:border-slate-800/40 rounded-2xl p-4 shrink-0 flex flex-col gap-2">
+      {user.role === 'admin' && (
+        <div className="flex justify-center mb-2 p-2 bg-white dark:bg-slate-900 rounded-xl border border-slate-100 dark:border-slate-800">
+          <img src="/uploads/page_47.png" alt="Tomato Admin Panel" className="h-8 object-contain" />
+        </div>
+      )}
       {/* Header Info */}
       <div className="flex items-center gap-3 p-2 mb-4 border-b border-slate-200/50 dark:border-slate-850/50 pb-4">
         <img
-          src={user.profilePicture || `https://api.dicebear.com/7.x/initials/svg?seed=${user.name}`}
+          src={user.profilePicture || '/uploads/page_10.png'}
           alt={user.name}
           className="w-12 h-12 rounded-xl object-cover ring-2 ring-teal-500/50"
         />

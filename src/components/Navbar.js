@@ -171,7 +171,7 @@ export default function Navbar() {
                   className="flex items-center gap-2 p-1.5 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl transition duration-150"
                 >
                   <img
-                    src={user.profilePicture || `https://api.dicebear.com/7.x/initials/svg?seed=${user.name}`}
+                    src={user.profilePicture || '/uploads/page_10.png'}
                     alt={user.name}
                     className="w-8 h-8 rounded-lg object-cover ring-1 ring-teal-500"
                   />
