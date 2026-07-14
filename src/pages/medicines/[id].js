@@ -6,6 +6,7 @@ import { useCart } from '../../context/CartContext';
 import { useAuth } from '../../context/AuthContext';
 import { FiShoppingCart, FiHeart, FiAlertCircle, FiStar, FiFileText } from 'react-icons/fi';
 import Link from 'next/link';
+import { getImageUrl } from '../../utils/imageHelper';
 
 export default function MedicineDetail() {
   const router = useRouter();
@@ -51,7 +52,7 @@ export default function MedicineDetail() {
         if (medRes.data.success) {
           const med = medRes.data.medicine;
           setMedicine(med);
-          setActiveImage(med.images?.[0] || 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=300&auto=format&fit=crop&q=60');
+          setActiveImage(getImageUrl(med.images?.[0]));
 
           // Fetch similar medicines
           const similarRes = await api.get(`/medicines?category=${med.category?._id}&limit=4`);
@@ -170,7 +171,7 @@ export default function MedicineDetail() {
           {/* Gallery view */}
           <div className="space-y-4">
             <div className="h-96 w-full rounded-2xl bg-white dark:bg-slate-900 border border-slate-105 flex items-center justify-center p-6 overflow-hidden">
-              <img src={activeImage} alt={medicine.name} className="max-h-full max-w-full object-contain" />
+              <img src={getImageUrl(activeImage)} alt={medicine.name} className="max-h-full max-w-full object-contain" />
             </div>
             {medicine.images && medicine.images.length > 1 && (
               <div className="flex gap-2">
@@ -182,7 +183,7 @@ export default function MedicineDetail() {
                       activeImage === img ? 'border-teal-500 ring-2 ring-teal-500/20' : 'border-slate-200'
                     }`}
                   >
-                    <img src={img} alt="" className="max-h-full max-w-full object-contain" />
+                    <img src={getImageUrl(img)} alt="" className="max-h-full max-w-full object-contain" />
                   </button>
                 ))}
               </div>

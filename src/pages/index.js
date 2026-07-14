@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import Layout from '../components/Layout';
 import api from '../services/api';
 import { motion } from 'framer-motion';
+import { getImageUrl } from '../utils/imageHelper';
 import {
   FiUploadCloud,
   FiShield,
@@ -175,7 +176,7 @@ export default function Home() {
               >
                 <div className="relative h-40 w-full mb-4 rounded-xl overflow-hidden bg-slate-50 flex items-center justify-center">
                   <img
-                    src={med.images?.[0] || 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=200&auto=format&fit=crop&q=60'}
+                    src={getImageUrl(med.images?.[0])}
                     alt={med.name}
                     className="max-h-full max-w-full object-contain"
                   />
@@ -189,7 +190,7 @@ export default function Home() {
                 <div className="flex-1 flex flex-col justify-between">
                   <div>
                     <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400">
-                      {med.brand?.name || 'GENERIC'}
+                      {med.brand?.name || 'CUISINE'}
                     </span>
                     <h3 className="font-bold text-sm mt-1 truncate">{med.name}</h3>
                     <p className="text-xs text-slate-400 truncate mb-4">{med.genericName}</p>

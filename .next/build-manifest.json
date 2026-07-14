@@ -5,8 +5,8 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/lhuZOmdEv6nR72_h5YhvU/_buildManifest.js",
-    "static/lhuZOmdEv6nR72_h5YhvU/_ssgManifest.js"
+    "static/PFylbT5ezZw3C_0nkXqzr/_buildManifest.js",
+    "static/PFylbT5ezZw3C_0nkXqzr/_ssgManifest.js"
   ],
   "rootMainFiles": [],
   "pages": {
@@ -17,7 +17,7 @@
       "static/chunks/36d2f571-b34c99ec70dab160.js",
       "static/chunks/263-1d2f2a897275c180.js",
       "static/chunks/348-1bcc0c49ab316183.js",
-      "static/chunks/pages/index-de18c5956587dcdd.js"
+      "static/chunks/pages/index-673a05ed13d919d7.js"
     ],
     "/_app": [
       "static/chunks/webpack-ee7e63bc15b31913.js",
@@ -39,7 +39,7 @@
       "static/chunks/36d2f571-b34c99ec70dab160.js",
       "static/chunks/263-1d2f2a897275c180.js",
       "static/chunks/348-1bcc0c49ab316183.js",
-      "static/chunks/pages/cart-91d0d08af545473a.js"
+      "static/chunks/pages/cart-d67542ca0d214e05.js"
     ],
     "/checkout": [
       "static/chunks/webpack-ee7e63bc15b31913.js",
@@ -48,7 +48,7 @@
       "static/chunks/36d2f571-b34c99ec70dab160.js",
       "static/chunks/263-1d2f2a897275c180.js",
       "static/chunks/348-1bcc0c49ab316183.js",
-      "static/chunks/pages/checkout-64a274ae63d0ec46.js"
+      "static/chunks/pages/checkout-9a7ea20cf44b19e2.js"
     ],
     "/dashboard/admin": [
       "static/chunks/webpack-ee7e63bc15b31913.js",
@@ -252,7 +252,7 @@
       "static/chunks/36d2f571-b34c99ec70dab160.js",
       "static/chunks/263-1d2f2a897275c180.js",
       "static/chunks/348-1bcc0c49ab316183.js",
-      "static/chunks/pages/medicines-cfa46962a6e8b8b4.js"
+      "static/chunks/pages/medicines-a3cac47cd09a6066.js"
     ],
     "/medicines/[id]": [
       "static/chunks/webpack-ee7e63bc15b31913.js",
@@ -261,7 +261,7 @@
       "static/chunks/36d2f571-b34c99ec70dab160.js",
       "static/chunks/263-1d2f2a897275c180.js",
       "static/chunks/348-1bcc0c49ab316183.js",
-      "static/chunks/pages/medicines/[id]-058e2288a2eb24db.js"
+      "static/chunks/pages/medicines/[id]-263ba6550b60ac9d.js"
     ],
     "/register": [
       "static/chunks/webpack-ee7e63bc15b31913.js",

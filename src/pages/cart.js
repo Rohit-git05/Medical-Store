@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Layout from '../components/Layout';
 import { useCart } from '../context/CartContext';
 import { FiTrash2, FiTag, FiShoppingCart, FiArrowRight } from 'react-icons/fi';
+import { getImageUrl } from '../utils/imageHelper';
 
 export default function CartPage() {
   const {
@@ -71,7 +72,7 @@ export default function CartPage() {
               className="flex items-center gap-4 bg-white dark:bg-slate-900 border border-slate-105 p-4 rounded-2xl"
             >
               <img
-                src={item.medicine.images?.[0] || 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=120&auto=format&fit=crop&q=60'}
+                src={getImageUrl(item.medicine.images?.[0])}
                 alt={item.medicine.name}
                 className="w-16 h-16 rounded-xl object-contain bg-slate-50 border p-2 shrink-0"
               />

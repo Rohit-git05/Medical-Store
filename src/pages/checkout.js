@@ -5,6 +5,7 @@ import { useCart } from '../context/CartContext';
 import { useAuth } from '../context/AuthContext';
 import api from '../services/api';
 import { FiCreditCard, FiTruck, FiLock, FiCheckCircle } from 'react-icons/fi';
+import { getImageUrl } from '../utils/imageHelper';
 
 export default function CheckoutPage() {
   const { cart, getTotals, coupon, clearCart } = useCart();
@@ -300,7 +301,7 @@ export default function CheckoutPage() {
               {cart.items.map((item) => (
                 <div key={item.medicine._id} className="flex gap-3 items-center text-xs">
                   <img
-                    src={item.medicine.images?.[0] || 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=100&auto=format&fit=crop&q=60'}
+                    src={getImageUrl(item.medicine.images?.[0])}
                     alt={item.medicine.name}
                     className="w-10 h-10 rounded-lg object-contain bg-slate-50 border p-1 shrink-0"
                   />

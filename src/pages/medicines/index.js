@@ -4,6 +4,7 @@ import Layout from '../../components/Layout';
 import api from '../../services/api';
 import { ProductGridSkeleton } from '../../components/LoadingSkeleton';
 import Link from 'next/link';
+import { getImageUrl } from '../../utils/imageHelper';
 
 export default function MedicinesList() {
   const router = useRouter();
@@ -234,7 +235,7 @@ export default function MedicinesList() {
                 >
                   <div className="relative h-40 w-full mb-4 rounded-xl overflow-hidden bg-slate-50 flex items-center justify-center">
                     <img
-                      src={med.images?.[0] || 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=200&auto=format&fit=crop&q=60'}
+                      src={getImageUrl(med.images?.[0])}
                       alt={med.name}
                       className="max-h-full max-w-full object-contain"
                     />
