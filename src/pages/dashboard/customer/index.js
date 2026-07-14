@@ -217,7 +217,7 @@ export default function CustomerDashboard() {
             {/* Profile pic section */}
             <div className="flex items-center gap-4 p-4 bg-slate-50 dark:bg-slate-900 rounded-2xl">
               <img
-                src={user.profilePicture || `https://api.dicebear.com/7.x/initials/svg?seed=${user.name}`}
+                src={user?.profilePicture || `https://api.dicebear.com/7.x/initials/svg?seed=${user?.name || 'Customer'}`}
                 alt=""
                 className="w-16 h-16 rounded-2xl object-cover ring-2 ring-teal-500"
               />
