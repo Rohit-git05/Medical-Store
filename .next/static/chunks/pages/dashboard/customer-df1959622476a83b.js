@@ -1,0 +1,1 @@
+(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[708],{3817:function(n,_,u){(window.__NEXT_P=window.__NEXT_P||[]).push(["/dashboard/customer",function(){return u(4489)}])}},function(n){n.O(0,[130,263,348,489,888,774,179],function(){return n(n.s=3817)}),_N_E=n.O()}]);

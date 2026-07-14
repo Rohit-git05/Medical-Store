@@ -1,0 +1,1 @@
+(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[987],{4151:function(n,u,_){(window.__NEXT_P=window.__NEXT_P||[]).push(["/dashboard/admin/blogs",function(){return _(1191)}])},1191:function(n,u,_){"use strict";_.r(u);var t=_(8231);u.default=t.default}},function(n){n.O(0,[130,196,263,421,348,231,888,774,179],function(){return n(n.s=4151)}),_N_E=n.O()}]);

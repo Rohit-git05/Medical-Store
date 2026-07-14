@@ -1,0 +1,1 @@
+(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[549],{2707:function(n,u,t){(window.__NEXT_P=window.__NEXT_P||[]).push(["/dashboard/pharmacist/inventory",function(){return t(1792)}])},1792:function(n,u,t){"use strict";t.r(u);var _=t(9088);u.default=_.default}},function(n){n.O(0,[130,263,348,88,888,774,179],function(){return n(n.s=2707)}),_N_E=n.O()}]);

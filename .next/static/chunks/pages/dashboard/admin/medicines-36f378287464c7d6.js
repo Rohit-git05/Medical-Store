@@ -1,0 +1,1 @@
+(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[360],{1119:function(n,u,_){(window.__NEXT_P=window.__NEXT_P||[]).push(["/dashboard/admin/medicines",function(){return _(2666)}])},2666:function(n,u,_){"use strict";_.r(u);var e=_(8231);u.default=e.default}},function(n){n.O(0,[130,196,263,421,348,231,888,774,179],function(){return n(n.s=1119)}),_N_E=n.O()}]);

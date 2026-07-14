@@ -29,6 +29,18 @@ export default function MedicineDetail() {
   // Wishlist state
   const [inWishlist, setInWishlist] = useState(false);
 
+  // Accordion state
+  const [openSections, setOpenSections] = useState({
+    uses: true,
+    dosage: false,
+    sideEffects: false,
+    precautions: false
+  });
+
+  const toggleSection = (section) => {
+    setOpenSections((prev) => ({ ...prev, [section]: !prev[section] }));
+  };
+
   useEffect(() => {
     if (!id) return;
 
@@ -180,9 +192,21 @@ export default function MedicineDetail() {
           {/* Details Content */}
           <div className="space-y-6">
             <div>
-              <span className="text-xs font-extrabold uppercase bg-teal-500/10 text-teal-650 px-3 py-1 rounded-full">
-                {medicine.brand?.name}
-              </span>
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="text-xs font-extrabold uppercase bg-teal-500/10 text-teal-650 px-3 py-1 rounded-full">
+                  {medicine.brand?.name}
+                </span>
+                {medicine.packSize && (
+                  <span className="text-xs font-extrabold uppercase bg-slate-150 dark:bg-slate-800 text-slate-600 dark:text-slate-350 px-3 py-1 rounded-full">
+                    {medicine.packSize}
+                  </span>
+                )}
+                {medicine.category && (
+                  <span className="text-xs font-extrabold uppercase bg-indigo-500/10 text-indigo-650 px-3 py-1 rounded-full">
+                    {medicine.category.name}
+                  </span>
+                )}
+              </div>
               <h1 className="text-3xl font-extrabold tracking-tight mt-3">{medicine.name}</h1>
               <p className="text-sm text-slate-400 mt-1 italic">Generic Name: {medicine.genericName}</p>
             </div>
@@ -266,7 +290,7 @@ export default function MedicineDetail() {
 
             {/* General descriptions */}
             <div className="space-y-4 pt-4 border-t border-slate-205/30">
-              <div className="grid grid-cols-2 gap-4 text-sm">
+              <div className="grid grid-cols-2 gap-4 text-sm mb-4">
                 <div>
                   <span className="font-bold text-xs text-slate-400 block uppercase">Manufacturer</span>
                   <span>{medicine.manufacturer || 'N/A'}</span>
@@ -276,17 +300,92 @@ export default function MedicineDetail() {
                   <span>{new Date(medicine.expiryDate).toLocaleDateString()}</span>
                 </div>
               </div>
-              <div>
-                <span className="font-bold text-xs text-slate-400 block uppercase mb-1">Uses</span>
-                <p className="text-sm">{medicine.uses || medicine.description}</p>
-              </div>
-              <div>
-                <span className="font-bold text-xs text-slate-400 block uppercase mb-1">Side Effects</span>
-                <p className="text-sm">{medicine.sideEffects || 'None reported'}</p>
-              </div>
-              <div>
-                <span className="font-bold text-xs text-slate-400 block uppercase mb-1">Dosage</span>
-                <p className="text-sm">{medicine.dosage || 'As directed by physician'}</p>
+
+              {/* Accordion Layout */}
+              <div className="space-y-2">
+                {/* Accordion: Uses */}
+                <div className="border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden">
+                  <button
+                    type="button"
+                    onClick={() => toggleSection('uses')}
+                    className="w-full flex items-center justify-between p-3.5 bg-slate-50 dark:bg-slate-900/50 hover:bg-slate-100 dark:hover:bg-slate-900 font-bold text-xs uppercase tracking-wider text-slate-500 text-left transition"
+                  >
+                    <span>Uses & Indications</span>
+                    <span className="text-sm">{openSections.uses ? '−' : '+'}</span>
+                  </button>
+                  {openSections.uses && (
+                    <div className="p-4 bg-white dark:bg-slate-950 text-sm leading-relaxed border-t border-slate-100 dark:border-slate-900">
+                      <p>{medicine.uses || medicine.description}</p>
+                    </div>
+                  )}
+                </div>
+
+                {/* Accordion: Dosage */}
+                <div className="border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden">
+                  <button
+                    type="button"
+                    onClick={() => toggleSection('dosage')}
+                    className="w-full flex items-center justify-between p-3.5 bg-slate-50 dark:bg-slate-900/50 hover:bg-slate-100 dark:hover:bg-slate-900 font-bold text-xs uppercase tracking-wider text-slate-500 text-left transition"
+                  >
+                    <span>Dosage Instructions</span>
+                    <span className="text-sm">{openSections.dosage ? '−' : '+'}</span>
+                  </button>
+                  {openSections.dosage && (
+                    <div className="p-4 bg-white dark:bg-slate-950 text-sm leading-relaxed border-t border-slate-100 dark:border-slate-900">
+                      <p>{medicine.dosage || 'As directed by physician.'}</p>
+                    </div>
+                  )}
+                </div>
+
+                {/* Accordion: Side Effects */}
+                <div className="border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden">
+                  <button
+                    type="button"
+                    onClick={() => toggleSection('sideEffects')}
+                    className="w-full flex items-center justify-between p-3.5 bg-slate-50 dark:bg-slate-900/50 hover:bg-slate-100 dark:hover:bg-slate-900 font-bold text-xs uppercase tracking-wider text-slate-500 text-left transition"
+                  >
+                    <span>Common Side Effects</span>
+                    <span className="text-sm">{openSections.sideEffects ? '−' : '+'}</span>
+                  </button>
+                  {openSections.sideEffects && (
+                    <div className="p-4 bg-white dark:bg-slate-950 text-sm leading-relaxed border-t border-slate-100 dark:border-slate-900">
+                      {Array.isArray(medicine.sideEffects) && medicine.sideEffects.length > 0 ? (
+                        <ul className="list-disc list-inside space-y-1">
+                          {medicine.sideEffects.map((item, idx) => (
+                            <li key={idx}>{item}</li>
+                          ))}
+                        </ul>
+                      ) : (
+                        <p>{medicine.sideEffects || 'None reported.'}</p>
+                      )}
+                    </div>
+                  )}
+                </div>
+
+                {/* Accordion: Precautions */}
+                <div className="border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden">
+                  <button
+                    type="button"
+                    onClick={() => toggleSection('precautions')}
+                    className="w-full flex items-center justify-between p-3.5 bg-slate-50 dark:bg-slate-900/50 hover:bg-slate-100 dark:hover:bg-slate-900 font-bold text-xs uppercase tracking-wider text-slate-500 text-left transition"
+                  >
+                    <span>Precautions & Safety Advisories</span>
+                    <span className="text-sm">{openSections.precautions ? '−' : '+'}</span>
+                  </button>
+                  {openSections.precautions && (
+                    <div className="p-4 bg-white dark:bg-slate-950 text-sm leading-relaxed border-t border-slate-100 dark:border-slate-900">
+                      {Array.isArray(medicine.precautions) && medicine.precautions.length > 0 ? (
+                        <ul className="list-disc list-inside space-y-1">
+                          {medicine.precautions.map((item, idx) => (
+                            <li key={idx}>{item}</li>
+                          ))}
+                        </ul>
+                      ) : (
+                        <p>No precautions reported.</p>
+                      )}
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
           </div>

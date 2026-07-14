@@ -1,0 +1,1 @@
+(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[799],{9761:function(n,u,t){(window.__NEXT_P=window.__NEXT_P||[]).push(["/dashboard/admin/settings",function(){return t(8175)}])},8175:function(n,u,t){"use strict";t.r(u);var _=t(8231);u.default=_.default}},function(n){n.O(0,[130,196,263,421,348,231,888,774,179],function(){return n(n.s=9761)}),_N_E=n.O()}]);

@@ -260,9 +260,16 @@ export default function MedicinesList() {
 
                   <div className="flex-1 flex flex-col justify-between">
                     <div>
-                      <span className="text-[9px] font-bold uppercase tracking-wider text-slate-400">
-                        {med.brand?.name || 'GENERIC'}
-                      </span>
+                      <div className="flex items-center gap-1.5 flex-wrap">
+                        <span className="text-[9px] font-bold uppercase tracking-wider text-slate-400">
+                          {med.brand?.name || 'GENERIC'}
+                        </span>
+                        {med.category && (
+                          <span className="text-[9px] font-bold uppercase tracking-wider bg-teal-500/10 text-teal-650 px-2 py-0.5 rounded-full">
+                            {med.category.name}
+                          </span>
+                        )}
+                      </div>
                       <h3 className="font-bold text-sm mt-1 truncate">{med.name}</h3>
                       <p className="text-xs text-slate-400 truncate mb-4">{med.genericName}</p>
                     </div>

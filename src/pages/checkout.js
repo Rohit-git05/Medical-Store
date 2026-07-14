@@ -298,12 +298,17 @@ export default function CheckoutPage() {
 
             <div className="max-h-48 overflow-y-auto space-y-3 border-b border-slate-105 pb-4">
               {cart.items.map((item) => (
-                <div key={item.medicine._id} className="flex justify-between items-center text-xs">
+                <div key={item.medicine._id} className="flex gap-3 items-center text-xs">
+                  <img
+                    src={item.medicine.images?.[0] || 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=100&auto=format&fit=crop&q=60'}
+                    alt={item.medicine.name}
+                    className="w-10 h-10 rounded-lg object-contain bg-slate-50 border p-1 shrink-0"
+                  />
                   <div className="min-w-0 flex-1">
                     <p className="font-bold truncate">{item.medicine.name}</p>
-                    <span className="text-slate-400">Qty: {item.quantity}</span>
+                    <span className="text-slate-400">₹{item.medicine.sellingPrice} × {item.quantity}</span>
                   </div>
-                  <span className="font-bold">₹{item.medicine.sellingPrice * item.quantity}</span>
+                  <span className="font-bold shrink-0">₹{item.medicine.sellingPrice * item.quantity}</span>
                 </div>
               ))}
             </div>

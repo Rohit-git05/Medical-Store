@@ -1,0 +1,1 @@
+(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[237],{3761:function(n,u,e){(window.__NEXT_P=window.__NEXT_P||[]).push(["/dashboard/customer/addresses",function(){return e(2164)}])},2164:function(n,u,e){"use strict";e.r(u);var s=e(4489);u.default=s.default}},function(n){n.O(0,[130,263,348,489,888,774,179],function(){return n(n.s=3761)}),_N_E=n.O()}]);

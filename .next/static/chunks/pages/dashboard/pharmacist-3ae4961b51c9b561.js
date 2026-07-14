@@ -1,0 +1,1 @@
+(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[685],{5087:function(n,_,u){(window.__NEXT_P=window.__NEXT_P||[]).push(["/dashboard/pharmacist",function(){return u(9088)}])}},function(n){n.O(0,[130,263,348,88,888,774,179],function(){return n(n.s=5087)}),_N_E=n.O()}]);

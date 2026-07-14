@@ -1,0 +1,1 @@
+(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[695],{7721:function(n,u,t){(window.__NEXT_P=window.__NEXT_P||[]).push(["/dashboard/customer/orders",function(){return t(4750)}])},4750:function(n,u,t){"use strict";t.r(u);var _=t(4489);u.default=_.default}},function(n){n.O(0,[130,263,348,489,888,774,179],function(){return n(n.s=7721)}),_N_E=n.O()}]);
