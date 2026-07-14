@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import DashboardLayout from '../../../components/DashboardLayout';
 import { useAuth } from '../../../context/AuthContext';
 import api from '../../../services/api';
-import { FiEdit, FiTrash, FiCheck, FiUpload } from 'react-icons/fi';
+import { FiEdit, FiTrash, FiCheck, FiUpload, FiUser } from 'react-icons/fi';
 
 export default function CustomerDashboard() {
   const { user, updateProfile, uploadProfilePicture } = useAuth();
@@ -216,11 +216,17 @@ export default function CustomerDashboard() {
 
             {/* Profile pic section */}
             <div className="flex items-center gap-4 p-4 bg-slate-50 dark:bg-slate-900 rounded-2xl">
-              <img
-                src={user?.profilePicture || `https://api.dicebear.com/7.x/initials/svg?seed=${user?.name || 'Customer'}`}
-                alt=""
-                className="w-16 h-16 rounded-2xl object-cover ring-2 ring-teal-500"
-              />
+              {user?.profilePicture ? (
+                <img
+                  src={user.profilePicture}
+                  alt=""
+                  className="w-16 h-16 rounded-2xl object-cover ring-2 ring-teal-500"
+                />
+              ) : (
+                <span className="flex h-16 w-16 items-center justify-center rounded-2xl bg-slate-105 dark:bg-slate-850 text-slate-500 ring-2 ring-teal-500/20">
+                  <FiUser size={32} />
+                </span>
+              )}
               <div>
                 <label className="btn-secondary py-1.5 px-4 text-xs font-semibold flex items-center gap-2 cursor-pointer">
                   <FiUpload /> Upload New Picture

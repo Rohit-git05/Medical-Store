@@ -42,11 +42,11 @@ export default function Home() {
   }, []);
 
   const premiumCategories = [
-    { name: 'Appetizers', icon: '🍢', color: 'from-orange-500/10 to-orange-600/10' },
-    { name: 'Mains', icon: '🍔', color: 'from-red-500/10 to-red-600/10' },
-    { name: 'Desserts', icon: '🍰', color: 'from-pink-500/10 to-pink-600/10' },
-    { name: 'Beverages', icon: '🥤', color: 'from-blue-500/10 to-blue-600/10' },
-    { name: 'Snacks', icon: '🍿', color: 'from-amber-500/10 to-amber-600/10' }
+    { name: 'Appetizers', image: '/uploads/page_49.png', color: 'from-orange-500/10 to-orange-600/10' },
+    { name: 'Mains', image: '/uploads/page_55.png', color: 'from-red-500/10 to-red-600/10' },
+    { name: 'Desserts', image: '/uploads/page_53.png', color: 'from-pink-500/10 to-pink-600/10' },
+    { name: 'Beverages', image: '/uploads/page_51.png', color: 'from-blue-500/10 to-blue-600/10' },
+    { name: 'Snacks', image: '/uploads/page_52.png', color: 'from-amber-500/10 to-amber-600/10' }
   ];
 
   return (
@@ -125,7 +125,11 @@ export default function Home() {
               href={`/medicines?categoryName=${cat.name}`}
               className="flex flex-col items-center justify-center p-4 bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-2xl hover:shadow-xl hover:border-teal-500/20 transition duration-300 transform hover:-translate-y-1"
             >
-              <span className="text-3xl mb-2">{cat.icon}</span>
+              <img
+                src={cat.image}
+                alt={cat.name}
+                className="w-12 h-12 rounded-full object-cover mb-2 border border-slate-100 dark:border-slate-800"
+              />
               <span className="text-xs font-bold text-slate-450 dark:text-slate-300 text-center">{cat.name}</span>
             </Link>
           ))}

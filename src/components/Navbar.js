@@ -170,11 +170,17 @@ export default function Navbar() {
                   onClick={() => setProfileDropdownOpen(!profileDropdownOpen)}
                   className="flex items-center gap-2 p-1.5 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl transition duration-150"
                 >
-                  <img
-                    src={user.profilePicture || '/uploads/page_10.png'}
-                    alt={user.name}
-                    className="w-8 h-8 rounded-lg object-cover ring-1 ring-teal-500"
-                  />
+                  {user.profilePicture ? (
+                    <img
+                      src={getImageUrl(user.profilePicture)}
+                      alt={user.name}
+                      className="w-8 h-8 rounded-lg object-cover ring-1 ring-teal-500"
+                    />
+                  ) : (
+                    <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-500">
+                      <FiUser size={18} />
+                    </span>
+                  )}
                   <span className="text-sm font-semibold max-w-[80px] truncate">{user.name.split(' ')[0]}</span>
                 </button>
 

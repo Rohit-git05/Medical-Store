@@ -4,7 +4,7 @@ import Layout from '../../components/Layout';
 import api from '../../services/api';
 import { useCart } from '../../context/CartContext';
 import { useAuth } from '../../context/AuthContext';
-import { FiShoppingCart, FiHeart, FiAlertCircle, FiStar, FiFileText } from 'react-icons/fi';
+import { FiShoppingCart, FiHeart, FiAlertCircle, FiStar, FiFileText, FiUser } from 'react-icons/fi';
 import Link from 'next/link';
 import { getImageUrl } from '../../utils/imageHelper';
 
@@ -451,11 +451,17 @@ export default function MedicineDetail() {
                   <div key={rev._id} className="bg-white dark:bg-slate-900 border border-slate-105 p-5 rounded-2xl space-y-2">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-3">
-                        <img
-                          src={rev.user?.profilePicture || `https://api.dicebear.com/7.x/initials/svg?seed=${rev.user?.name}`}
-                          alt=""
-                          className="w-10 h-10 rounded-full object-cover"
-                        />
+                        {rev.user?.profilePicture ? (
+                          <img
+                            src={getImageUrl(rev.user.profilePicture)}
+                            alt=""
+                            className="w-10 h-10 rounded-full object-cover"
+                          />
+                        ) : (
+                          <span className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-105 dark:bg-slate-850 text-slate-500">
+                            <FiUser size={20} />
+                          </span>
+                        )}
                         <div>
                           <div className="font-bold text-sm">{rev.user?.name || 'Customer'}</div>
                           <div className="text-xs text-slate-400">{new Date(rev.createdAt).toLocaleDateString()}</div>

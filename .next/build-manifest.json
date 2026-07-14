@@ -5,8 +5,8 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/Y-c1sbQeLmZC0pAItIz_e/_buildManifest.js",
-    "static/Y-c1sbQeLmZC0pAItIz_e/_ssgManifest.js"
+    "static/uiHn4TkdVLOYwBxPH3caA/_buildManifest.js",
+    "static/uiHn4TkdVLOYwBxPH3caA/_ssgManifest.js"
   ],
   "rootMainFiles": [],
   "pages": {
@@ -16,8 +16,8 @@
       "static/chunks/main-fc56ac81e639fb5e.js",
       "static/chunks/36d2f571-b34c99ec70dab160.js",
       "static/chunks/263-1d2f2a897275c180.js",
-      "static/chunks/348-38d6e5acfc7e1313.js",
-      "static/chunks/pages/index-5677cdf5e8bd7c10.js"
+      "static/chunks/348-c8ead52e9a969071.js",
+      "static/chunks/pages/index-cc548c889d2e3c75.js"
     ],
     "/_app": [
       "static/chunks/webpack-ee7e63bc15b31913.js",
@@ -38,7 +38,7 @@
       "static/chunks/main-fc56ac81e639fb5e.js",
       "static/chunks/36d2f571-b34c99ec70dab160.js",
       "static/chunks/263-1d2f2a897275c180.js",
-      "static/chunks/348-38d6e5acfc7e1313.js",
+      "static/chunks/348-c8ead52e9a969071.js",
       "static/chunks/pages/cart-9ab2a92c8b29e1ed.js"
     ],
     "/checkout": [
@@ -47,7 +47,7 @@
       "static/chunks/main-fc56ac81e639fb5e.js",
       "static/chunks/36d2f571-b34c99ec70dab160.js",
       "static/chunks/263-1d2f2a897275c180.js",
-      "static/chunks/348-38d6e5acfc7e1313.js",
+      "static/chunks/348-c8ead52e9a969071.js",
       "static/chunks/pages/checkout-288dad36e58884d7.js"
     ],
     "/dashboard/admin": [
@@ -58,8 +58,8 @@
       "static/chunks/ee8b1517-25ef416531569c5d.js",
       "static/chunks/263-1d2f2a897275c180.js",
       "static/chunks/421-11d4cc75ad9433bd.js",
-      "static/chunks/348-38d6e5acfc7e1313.js",
-      "static/chunks/231-072112c9e9f4b447.js",
+      "static/chunks/348-c8ead52e9a969071.js",
+      "static/chunks/231-95211c63d8469642.js",
       "static/chunks/pages/dashboard/admin-4f40b2f56b86c653.js"
     ],
     "/dashboard/admin/blogs": [
@@ -70,8 +70,8 @@
       "static/chunks/ee8b1517-25ef416531569c5d.js",
       "static/chunks/263-1d2f2a897275c180.js",
       "static/chunks/421-11d4cc75ad9433bd.js",
-      "static/chunks/348-38d6e5acfc7e1313.js",
-      "static/chunks/231-072112c9e9f4b447.js",
+      "static/chunks/348-c8ead52e9a969071.js",
+      "static/chunks/231-95211c63d8469642.js",
       "static/chunks/pages/dashboard/admin/blogs-a399c6ce3eae6ee7.js"
     ],
     "/dashboard/admin/coupons": [
@@ -82,8 +82,8 @@
       "static/chunks/ee8b1517-25ef416531569c5d.js",
       "static/chunks/263-1d2f2a897275c180.js",
       "static/chunks/421-11d4cc75ad9433bd.js",
-      "static/chunks/348-38d6e5acfc7e1313.js",
-      "static/chunks/231-072112c9e9f4b447.js",
+      "static/chunks/348-c8ead52e9a969071.js",
+      "static/chunks/231-95211c63d8469642.js",
       "static/chunks/pages/dashboard/admin/coupons-836840ecfeb1418f.js"
     ],
     "/dashboard/admin/medicines": [
@@ -94,8 +94,8 @@
       "static/chunks/ee8b1517-25ef416531569c5d.js",
       "static/chunks/263-1d2f2a897275c180.js",
       "static/chunks/421-11d4cc75ad9433bd.js",
-      "static/chunks/348-38d6e5acfc7e1313.js",
-      "static/chunks/231-072112c9e9f4b447.js",
+      "static/chunks/348-c8ead52e9a969071.js",
+      "static/chunks/231-95211c63d8469642.js",
       "static/chunks/pages/dashboard/admin/medicines-36f378287464c7d6.js"
     ],
     "/dashboard/admin/orders": [
@@ -106,8 +106,8 @@
       "static/chunks/ee8b1517-25ef416531569c5d.js",
       "static/chunks/263-1d2f2a897275c180.js",
       "static/chunks/421-11d4cc75ad9433bd.js",
-      "static/chunks/348-38d6e5acfc7e1313.js",
-      "static/chunks/231-072112c9e9f4b447.js",
+      "static/chunks/348-c8ead52e9a969071.js",
+      "static/chunks/231-95211c63d8469642.js",
       "static/chunks/pages/dashboard/admin/orders-16e4ceae58c59ac0.js"
     ],
     "/dashboard/admin/settings": [
@@ -118,8 +118,8 @@
       "static/chunks/ee8b1517-25ef416531569c5d.js",
       "static/chunks/263-1d2f2a897275c180.js",
       "static/chunks/421-11d4cc75ad9433bd.js",
-      "static/chunks/348-38d6e5acfc7e1313.js",
-      "static/chunks/231-072112c9e9f4b447.js",
+      "static/chunks/348-c8ead52e9a969071.js",
+      "static/chunks/231-95211c63d8469642.js",
       "static/chunks/pages/dashboard/admin/settings-637a6d0567cbfcd3.js"
     ],
     "/dashboard/admin/suppliers": [
@@ -130,8 +130,8 @@
       "static/chunks/ee8b1517-25ef416531569c5d.js",
       "static/chunks/263-1d2f2a897275c180.js",
       "static/chunks/421-11d4cc75ad9433bd.js",
-      "static/chunks/348-38d6e5acfc7e1313.js",
-      "static/chunks/231-072112c9e9f4b447.js",
+      "static/chunks/348-c8ead52e9a969071.js",
+      "static/chunks/231-95211c63d8469642.js",
       "static/chunks/pages/dashboard/admin/suppliers-5b72876477a1cef3.js"
     ],
     "/dashboard/admin/users": [
@@ -142,8 +142,8 @@
       "static/chunks/ee8b1517-25ef416531569c5d.js",
       "static/chunks/263-1d2f2a897275c180.js",
       "static/chunks/421-11d4cc75ad9433bd.js",
-      "static/chunks/348-38d6e5acfc7e1313.js",
-      "static/chunks/231-072112c9e9f4b447.js",
+      "static/chunks/348-c8ead52e9a969071.js",
+      "static/chunks/231-95211c63d8469642.js",
       "static/chunks/pages/dashboard/admin/users-6f36d23330409e38.js"
     ],
     "/dashboard/customer": [
@@ -152,8 +152,8 @@
       "static/chunks/main-fc56ac81e639fb5e.js",
       "static/chunks/36d2f571-b34c99ec70dab160.js",
       "static/chunks/263-1d2f2a897275c180.js",
-      "static/chunks/348-38d6e5acfc7e1313.js",
-      "static/chunks/489-306dd8470da24d4f.js",
+      "static/chunks/348-c8ead52e9a969071.js",
+      "static/chunks/489-fc99fd772669623e.js",
       "static/chunks/pages/dashboard/customer-df1959622476a83b.js"
     ],
     "/dashboard/customer/addresses": [
@@ -162,8 +162,8 @@
       "static/chunks/main-fc56ac81e639fb5e.js",
       "static/chunks/36d2f571-b34c99ec70dab160.js",
       "static/chunks/263-1d2f2a897275c180.js",
-      "static/chunks/348-38d6e5acfc7e1313.js",
-      "static/chunks/489-306dd8470da24d4f.js",
+      "static/chunks/348-c8ead52e9a969071.js",
+      "static/chunks/489-fc99fd772669623e.js",
       "static/chunks/pages/dashboard/customer/addresses-4b9000d702cdb71f.js"
     ],
     "/dashboard/customer/orders": [
@@ -172,8 +172,8 @@
       "static/chunks/main-fc56ac81e639fb5e.js",
       "static/chunks/36d2f571-b34c99ec70dab160.js",
       "static/chunks/263-1d2f2a897275c180.js",
-      "static/chunks/348-38d6e5acfc7e1313.js",
-      "static/chunks/489-306dd8470da24d4f.js",
+      "static/chunks/348-c8ead52e9a969071.js",
+      "static/chunks/489-fc99fd772669623e.js",
       "static/chunks/pages/dashboard/customer/orders-61fb8c46f5a8acf6.js"
     ],
     "/dashboard/customer/prescriptions": [
@@ -182,8 +182,8 @@
       "static/chunks/main-fc56ac81e639fb5e.js",
       "static/chunks/36d2f571-b34c99ec70dab160.js",
       "static/chunks/263-1d2f2a897275c180.js",
-      "static/chunks/348-38d6e5acfc7e1313.js",
-      "static/chunks/489-306dd8470da24d4f.js",
+      "static/chunks/348-c8ead52e9a969071.js",
+      "static/chunks/489-fc99fd772669623e.js",
       "static/chunks/pages/dashboard/customer/prescriptions-2d35e8d19da242d5.js"
     ],
     "/dashboard/customer/wishlist": [
@@ -192,8 +192,8 @@
       "static/chunks/main-fc56ac81e639fb5e.js",
       "static/chunks/36d2f571-b34c99ec70dab160.js",
       "static/chunks/263-1d2f2a897275c180.js",
-      "static/chunks/348-38d6e5acfc7e1313.js",
-      "static/chunks/489-306dd8470da24d4f.js",
+      "static/chunks/348-c8ead52e9a969071.js",
+      "static/chunks/489-fc99fd772669623e.js",
       "static/chunks/pages/dashboard/customer/wishlist-676edae1ab1125e6.js"
     ],
     "/dashboard/pharmacist": [
@@ -202,8 +202,8 @@
       "static/chunks/main-fc56ac81e639fb5e.js",
       "static/chunks/36d2f571-b34c99ec70dab160.js",
       "static/chunks/263-1d2f2a897275c180.js",
-      "static/chunks/348-38d6e5acfc7e1313.js",
-      "static/chunks/88-3c83eb92a8a6ae46.js",
+      "static/chunks/348-c8ead52e9a969071.js",
+      "static/chunks/88-06494da7dc82ff15.js",
       "static/chunks/pages/dashboard/pharmacist-3ae4961b51c9b561.js"
     ],
     "/dashboard/pharmacist/inventory": [
@@ -212,8 +212,8 @@
       "static/chunks/main-fc56ac81e639fb5e.js",
       "static/chunks/36d2f571-b34c99ec70dab160.js",
       "static/chunks/263-1d2f2a897275c180.js",
-      "static/chunks/348-38d6e5acfc7e1313.js",
-      "static/chunks/88-3c83eb92a8a6ae46.js",
+      "static/chunks/348-c8ead52e9a969071.js",
+      "static/chunks/88-06494da7dc82ff15.js",
       "static/chunks/pages/dashboard/pharmacist/inventory-00c5142469a42cae.js"
     ],
     "/dashboard/pharmacist/orders": [
@@ -222,8 +222,8 @@
       "static/chunks/main-fc56ac81e639fb5e.js",
       "static/chunks/36d2f571-b34c99ec70dab160.js",
       "static/chunks/263-1d2f2a897275c180.js",
-      "static/chunks/348-38d6e5acfc7e1313.js",
-      "static/chunks/88-3c83eb92a8a6ae46.js",
+      "static/chunks/348-c8ead52e9a969071.js",
+      "static/chunks/88-06494da7dc82ff15.js",
       "static/chunks/pages/dashboard/pharmacist/orders-5021226e691b9cc5.js"
     ],
     "/dashboard/pharmacist/prescriptions": [
@@ -232,8 +232,8 @@
       "static/chunks/main-fc56ac81e639fb5e.js",
       "static/chunks/36d2f571-b34c99ec70dab160.js",
       "static/chunks/263-1d2f2a897275c180.js",
-      "static/chunks/348-38d6e5acfc7e1313.js",
-      "static/chunks/88-3c83eb92a8a6ae46.js",
+      "static/chunks/348-c8ead52e9a969071.js",
+      "static/chunks/88-06494da7dc82ff15.js",
       "static/chunks/pages/dashboard/pharmacist/prescriptions-8cd147771a85b7ea.js"
     ],
     "/login": [
@@ -242,7 +242,7 @@
       "static/chunks/main-fc56ac81e639fb5e.js",
       "static/chunks/36d2f571-b34c99ec70dab160.js",
       "static/chunks/263-1d2f2a897275c180.js",
-      "static/chunks/348-38d6e5acfc7e1313.js",
+      "static/chunks/348-c8ead52e9a969071.js",
       "static/chunks/pages/login-d636ad2476d89418.js"
     ],
     "/medicines": [
@@ -251,7 +251,7 @@
       "static/chunks/main-fc56ac81e639fb5e.js",
       "static/chunks/36d2f571-b34c99ec70dab160.js",
       "static/chunks/263-1d2f2a897275c180.js",
-      "static/chunks/348-38d6e5acfc7e1313.js",
+      "static/chunks/348-c8ead52e9a969071.js",
       "static/chunks/pages/medicines-24e487c49427be1c.js"
     ],
     "/medicines/[id]": [
@@ -260,8 +260,8 @@
       "static/chunks/main-fc56ac81e639fb5e.js",
       "static/chunks/36d2f571-b34c99ec70dab160.js",
       "static/chunks/263-1d2f2a897275c180.js",
-      "static/chunks/348-38d6e5acfc7e1313.js",
-      "static/chunks/pages/medicines/[id]-a7b40abb5bfc5004.js"
+      "static/chunks/348-c8ead52e9a969071.js",
+      "static/chunks/pages/medicines/[id]-20a0b4e75e02627d.js"
     ],
     "/register": [
       "static/chunks/webpack-ee7e63bc15b31913.js",
@@ -269,7 +269,7 @@
       "static/chunks/main-fc56ac81e639fb5e.js",
       "static/chunks/36d2f571-b34c99ec70dab160.js",
       "static/chunks/263-1d2f2a897275c180.js",
-      "static/chunks/348-38d6e5acfc7e1313.js",
+      "static/chunks/348-c8ead52e9a969071.js",
       "static/chunks/pages/register-dd702159d2cc6dad.js"
     ]
   },

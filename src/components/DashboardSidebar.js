@@ -69,11 +69,17 @@ export default function DashboardSidebar() {
       )}
       {/* Header Info */}
       <div className="flex items-center gap-3 p-2 mb-4 border-b border-slate-200/50 dark:border-slate-850/50 pb-4">
-        <img
-          src={user.profilePicture || '/uploads/page_10.png'}
-          alt={user.name}
-          className="w-12 h-12 rounded-xl object-cover ring-2 ring-teal-500/50"
-        />
+        {user.profilePicture ? (
+          <img
+            src={user.profilePicture}
+            alt={user.name}
+            className="w-12 h-12 rounded-xl object-cover ring-2 ring-teal-500/50"
+          />
+        ) : (
+          <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-slate-105 dark:bg-slate-850 text-slate-500 shrink-0">
+            <FiUser size={24} />
+          </span>
+        )}
         <div>
           <div className="font-bold text-sm tracking-tight truncate max-w-[120px]">{user.name}</div>
           <div className="text-xs font-semibold text-slate-400 capitalize">{user.role}</div>
